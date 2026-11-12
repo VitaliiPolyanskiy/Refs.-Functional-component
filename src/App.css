@@ -5,11 +5,19 @@
   text-align: center;
 }
 
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms ease-in-out;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

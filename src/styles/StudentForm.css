@@ -1,33 +1,83 @@
 .student-form {
-  max-width: 350px;
-  margin: 20px auto;
-  padding: 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .student-form {
+    background: #1e1e1e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.student-form h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  color: inherit;
 }
 
 .field {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 input {
   width: 100%;
-  padding: 6px 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: transparent;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  input {
+    border-color: #333;
+    color: white;
+  }
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .btn-primary {
-  margin-top: 12px;
-  padding: 8px 14px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 14px;
   background: #2563eb;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }

@@ -23,14 +23,14 @@ export default function StudentFormFunc(props: StudentsProps) {
     const age = Number(ageRef.current?.value);
     const rating = Number(ratingRef.current?.value);
 
-           if (name !== "" && surname !== "" && age > 0 && rating >=1 && rating <= 12) {
+    if (name !== "" && surname !== "" && age > 0 && rating >= 1 && rating <= 12) {
             Swal.fire({
-                title: "Информация о студенте",
+                title: "Інформація про студента",
                 html: `
                     <div style="text-align: left; font-size: 16px;">
-                        <b>Имя:</b> ${name}<br>
-                        <b>Фамилия:</b> ${surname}<br>
-                        <b>Возраст:</b> ${age}<br>
+                        <b>Ім'я:</b> ${name}<br>
+                        <b>Прізвище:</b> ${surname}<br>
+                        <b>Вік:</b> ${age}<br>
                         <b>Рейтинг:</b> ${rating}
                     </div>
                 `,
@@ -40,10 +40,10 @@ export default function StudentFormFunc(props: StudentsProps) {
             });
         } else {
             Swal.fire({
-                title: "Ошибка",
-                text: "Проверьте правильность заполнения формы.",
+                title: "Помилка",
+                text: "Перевірте правильність заповнення форми.",
                 icon: "error",
-                confirmButtonText: "Понятно",
+                confirmButtonText: "Зрозуміло",
             });
         }
   };
@@ -53,17 +53,17 @@ export default function StudentFormFunc(props: StudentsProps) {
     <h2>Форма студента</h2>
 
       <div className="field">
-        <label>Имя:</label>
+        <label>Ім'я:</label>
         <input type="text" defaultValue={props.name} ref={nameRef} />
       </div>
 
       <div className="field">
-        <label>Фамилия:</label>
+        <label>Прізвище:</label>
         <input type="text" defaultValue={props.surname} ref={surnameRef} />
       </div>
 
       <div className="field">
-        <label>Возраст:</label>
+        <label>Вік:</label>
         <input type="number" defaultValue={props.age} ref={ageRef} />
       </div>
 
@@ -73,7 +73,7 @@ export default function StudentFormFunc(props: StudentsProps) {
       </div>
 
       <button type="submit" className="btn btn-primary">
-        Показать данные
+        Показати дані
       </button>
     </form>
   );
